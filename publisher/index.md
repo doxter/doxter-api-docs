@@ -12,6 +12,8 @@ layout: default
 - [Search Responses](#search-responses)
     - [Metadata](#metadata)
 - [Search Results](#search-results)
+- [Doctor Details](#doctor-details)
+- [Response](#Response)
 
 <!-- end toc -->
 
@@ -216,7 +218,7 @@ Each result within the results array may contain the following fields:
 - `available_times[]`: An array of times in ISO8601 format with available times of this practice or this doctor. Optional.  
 
 
-## Doctor details
+## <a name="doctor-details"></a>Doctor details
 
 This service returns detailed information about a doctor. A request is an HTTP URL of the following form:  
 
@@ -228,7 +230,7 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
 
 - `id` - doxter doctor id obtained from a doctor or practice search
 
-## Response
+## <a name="response"></a>Response
 
 ```JSON
 {
