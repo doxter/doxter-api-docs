@@ -2,24 +2,13 @@
 layout: default
 ---
 
-# Publisher API
+# The doxter Practices API for publishers
 
-## Contents
+The doxter Practice API is a service that returns information about doctor practices using HTTP requests. The service is accessed as an HTTP request and returns JSON only. The Pratice API uses a doxter ID to uniquely identify each entity (practice or doctor). The following api requests are available:
 
-- [Introduction](#introduction)
-    - [Authentication](#authentication)
-- [Practice Search](#practice-search)
-- [Search Responses](#search-responses)
-    - [Metadata](#metadata)
-- [Search Results](#search-results)
-- [Doctor Details](#doctor-details)
-- [Response](#Response)
-
-<!-- end toc -->
-
-## <a name="introduction"></a>Introduction
-
-The doxter Practice API is a service that returns information about doctor practices using HTTP requests. The service is accessed as an HTTP request and returns JSON only. The Pratice API uses a doxter ID to uniquely identify a practice.  
+- [Practice Search](#practice-search) returns a list of practices
+- [Doctor Search](#doctor-search) returns a list of doctors
+- [Doctor Details](#doctor-details) requests return more details about a specific doctor, including available times
 
 ### <a name="authentication"></a>Authentication
 
@@ -68,7 +57,7 @@ Search responses are returned JSON format. The following example shows a search 
             "focuses": [
                 "Gleichgewichtsstörungen",
                 "Schlechte Nasenatmung",
-                "Verzögerte Sprachentwicklung"               
+                "Verzögerte Sprachentwicklung"
             ],
             "photos": [
                 "https://doxter.s3.amazonaws.com/assets/images/doctors/54dde7b46632380011bb0000.jpeg"
@@ -217,6 +206,44 @@ Each result within the results array may contain the following fields:
 - `doctors` - a list of doxter ids of doctors that work in that practice
 - `available_times[]`: An array of times in ISO8601 format with available times of this practice or this doctor. Optional.  
 
+## <a name="doctor-search"></a>Doctor search
+
+A doctor search returns a list of doctors along with summary information about each doctor; additional information is available via a [doctor-details](#doctor-details) query.
+
+```
+GET https://practices.doxterapis.com/v1/doctors
+```
+
+The following example shows a doctor search response.
+
+```JSON
+{
+    "status": "OK",
+    "next_page_token": "Yk1qcXRsaGdidE5mYWVxK2taf3FDdz01LS00bVRCUjd2YTQxZFJQOWVDZmtiWVNRPT0=--b7379fd0195a55b1443ea75a2f023abc7ed0de8d",
+    "results": [
+        {
+            "geometry": {
+              "location": {
+                "lat": -33.87,
+                "lng": 151.199025,
+              }
+            },
+            "id": "564ceb6b303030000f1a0000",
+            "lanr": "lebenslange Ärztenummer",
+            "name": "Frau Dipl. Soz.Päd. Meloni",
+            "available_times":
+            "job_titles": [
+                "Kinder- und Jugendpsychotherapeutin"
+            ],
+            "photo": "https://doxter-de.s3.amazonaws.com/assets/images/doctors/564ceb6b303030000f1a0000.jpeg",
+            "rating_count": 0,
+            "url": "https://www.doxter.de/doctors/564ceb6b303030000f1a0000",
+            "status": "LISTED"
+        }
+    ]
+}
+```
+
 
 ## <a name="doctor-details"></a>Doctor details
 
@@ -230,7 +257,7 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
 
 - `id` - doxter doctor id obtained from a doctor or practice search
 
-## <a name="response"></a>Response
+### Response
 
 ```JSON
 {
@@ -247,7 +274,7 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
         "Wurzelkanalbehandlung unter dem Dentalmikroskop"
     ],
     "photo": "https://doxter-de.s3.amazonaws.com/assets/images/doctors/4dc96eb2dc6e9a0af3000045.jpeg",
-    "rating": 4.555555555555555,
+    "rating": 4.6,
     "rating_count": 9,
     "available_times": [
         "2015-11-16T07:00:00.000Z",
@@ -257,4 +284,3 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
     "status": "LISTED"
 }
 ```
-
