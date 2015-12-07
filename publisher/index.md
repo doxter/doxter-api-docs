@@ -218,29 +218,23 @@ The following example shows a doctor search response.
 
 ```JSON
 {
-    "status": "OK",
-    "next_page_token": "Yk1qcXRsaGdidE5mYWVxK2taf3FDdz01LS00bVRCUjd2YTQxZFJQOWVDZmtiWVNRPT0=--b7379fd0195a55b1443ea75a2f023abc7ed0de8d",
-    "results": [
-        {
-            "geometry": {
-              "location": {
-                "lat": -33.87,
-                "lng": 151.199025,
-              }
-            },
-            "id": "564ceb6b303030000f1a0000",
-            "lanr": "lebenslange Ärztenummer",
-            "name": "Frau Dipl. Soz.Päd. Meloni",
-            "available_times":
-            "job_titles": [
-                "Kinder- und Jugendpsychotherapeutin"
-            ],
-            "photo": "https://doxter-de.s3.amazonaws.com/assets/images/doctors/564ceb6b303030000f1a0000.jpeg",
-            "rating_count": 0,
-            "url": "https://www.doxter.de/doctors/564ceb6b303030000f1a0000",
-            "status": "LISTED"
-        }
-    ]
+  "results": [
+    {
+      "id": "5099327ddf34d500020061f3",
+      "url": "https://www.doxter.de/frauenarzt-hannover/dr-gabriele-toboll-jacob",
+      "gender": "Frau",
+      "title": "Dr.",
+      "first_name": "Gabriele",
+      "last_name": "Toboll-Jacob",
+      "job_titles": [
+              "Frauenärztin",
+              "Psychotherapie"
+              ],
+      "photo": "https://doxter-de.s3.amazonaws.com/assets/images/doctors/5099327ddf34d500020061f3.jpeg",
+      "rating_count": 0,
+      "status": "LISTED"
+    }
+  ]
 }
 ```
 
