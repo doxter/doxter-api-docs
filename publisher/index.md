@@ -266,13 +266,7 @@ Using the metadata from the Practice Service "you can keep data for all [doctor 
 
 - `next_page_token` - Token used to access the next page of this result. Omitted if no further results are available, in which case next_sync_token is provided.  
 
-## <a name="search-results"></a>Search Results
-
-
-The JSON response contains two root elements:  
-
-`meta` - contains metadata on the request. See Status and Synchronization below.  
-`results` - contains an array of practices with information about each. See Search Results for information about these results.  
+## Results
 
 Each result within the results array may contain the following fields:  
 
