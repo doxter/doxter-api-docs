@@ -80,7 +80,7 @@ Search responses are returned JSON format. The following example shows a search 
             "doctors":  [
                "54ddef6d3030312a5d420000",
                "54ddef6d3030312a5d420001",
-            ]
+            ],
             "status": "LISTED"
         },
         {
