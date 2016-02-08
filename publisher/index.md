@@ -225,7 +225,7 @@ _(token explanation is taken verbatim from google calendar api)_
 - `page_token` - Token obtained from the `next_page_token` field that is returned if the results are paginated. Optional, but always together with `sync_token`.  
 
 
-
+### Search Responses
 
 The following example shows a doctor search response.
 
@@ -252,6 +252,22 @@ The following example shows a doctor search response.
   ]
 }
 ```
+
+#### Status Code
+
+- `OK` indicates that no errors occurred  
+- `INVALID_TOKEN` indicates that either the sync or page token is invalid.  
+
+#### Synchronization
+
+Using the metadata from the Practice Service "you can keep data for all [doctor profile] collections in sync while saving bandwidth" ([_Synchronize Resources Efficiently, Google Calendar API_](https://developers.google.com/google-apps/calendar/v3/sync)).  
+
+- `next_sync_token` - Token used at a later point in time to retrieve only the entries that have changed since this result was returned. Omitted if further results are available, in which case next_page_token is provided.  
+
+- `next_page_token` - Token used to access the next page of this result. Omitted if no further results are available, in which case next_sync_token is provided.  
+
+## <a name="search-results"></a>Search Results
+
 
 The JSON response contains two root elements:  
 
