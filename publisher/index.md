@@ -258,7 +258,7 @@ The following example shows a doctor search response.
 - `OK` indicates that no errors occurred  
 - `INVALID_TOKEN` indicates that either the sync or page token is invalid.  
 
-#### Synchronization
+#### Pagination and Synchronization
 
 Using the metadata from the Practice Service "you can keep data for all [doctor profile] collections in sync while saving bandwidth" ([_Synchronize Resources Efficiently, Google Calendar API_](https://developers.google.com/google-apps/calendar/v3/sync)).  
 
