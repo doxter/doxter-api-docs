@@ -167,7 +167,9 @@ Using the metadata from the Practice Service "you can keep data for all [practic
 
 ## <a name="search-results"></a>Search Results
 
-When the Practice service returns JSON results from a search, it places them within a results array. Even if the service returns no results it still returns an empty results array.  
+When the Practice service returns JSON results from a search, it places them within a results array. Even if the service returns no results it still returns an empty results array.
+
+
 
 Each result within the results array may contain the following fields:  
 
@@ -214,6 +216,17 @@ A doctor search returns a list of doctors along with summary information about e
 GET https://practices.doxterapis.com/v1/doctors
 ```
 
+**Optional parameters**  
+
+_(token explanation is taken verbatim from google calendar api)_  
+
+- `sync_token` - Token obtained from the `next_sync_token` field returned on the last page of results from the previous request. It makes the result of this list request contain only entries that have changed since then. All events deleted since the previous list request will always be in the result set  
+
+- `page_token` - Token obtained from the `next_page_token` field that is returned if the results are paginated. Optional, but always together with `sync_token`.  
+
+
+
+
 The following example shows a doctor search response.
 
 ```JSON
@@ -239,6 +252,11 @@ The following example shows a doctor search response.
   ]
 }
 ```
+
+The JSON response contains two root elements:  
+
+`meta` - contains metadata on the request. See Status and Synchronization below.  
+`results` - contains an array of practices with information about each. See Search Results for information about these results.  
 
 Each result within the results array may contain the following fields:  
 
@@ -268,7 +286,7 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
 
 - `id` - doxter doctor id obtained from a doctor or practice search
 
-### Response
+### Search Responses
 
 ```JSON
 {
