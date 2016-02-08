@@ -218,6 +218,8 @@ The following example shows a doctor search response.
 
 ```JSON
 {
+  "status": "OK",
+  "next_page_token": "ZFlDUkFiaXJxS29qb0g2cFpwQkk5Zz09LS1lT2hVdUhyd0paMW10TU9tVXRlbzhBPT0=--3baee41914192c4819f9bdf9705fdd4ed840373d",
   "results": [
     {
       "id": "5099327ddf34d500020061f3",
@@ -238,6 +240,21 @@ The following example shows a doctor search response.
 }
 ```
 
+Each result within the results array may contain the following fields:  
+
+- `id` - contains a unique stable identifier denoting this profile
+- `url` contains the URL of the official doxter page for this practice
+- `gender` can be either: `"Herr"` or `"Frau"`  
+- `title` contains the academic title like `"Dr."` or `"Prof. Dr."`  
+- `first_name` is the first name of the person  
+- `last_name` is the last name of the person  
+- `job_titles[]` contains an array of practice type or gender inflected specialties. For example: dentist will inflect to `"Zahnarzt"` for a male doctor, `"Zahnärztin"` for a female doctor.
+- `photo` an photo photo url of the doctor profile
+- `rating` the patients's overall rating for this practice. Optional.  
+- `rating_count` the number of ratings for this profile. Optional, but always given when `rating` is.  
+- `status`: Status of the practice. Possible values are:  
+  - `"DELETED"` - the practice has been deleted from doxter  
+  - `"LISTED"` - the practice is listed on doxter  
 
 ## <a name="doctor-details"></a>Doctor details
 
