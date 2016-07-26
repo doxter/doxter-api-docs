@@ -271,18 +271,18 @@ Using the metadata from the Practice Service "you can keep data for all [doctor 
 Each result within the results array may contain the following fields:  
 
 - `id` - contains a unique stable identifier denoting this profile
-- `url` contains the URL of the official doxter page for this practice
+- `url` contains the URL of the official doxter page for this doctor
 - `gender` can be either: `"Herr"` or `"Frau"`  
 - `title` contains the academic title like `"Dr."` or `"Prof. Dr."`  
 - `first_name` is the first name of the person  
 - `last_name` is the last name of the person  
 - `job_titles[]` contains an array of practice type or gender inflected specialties. For example: dentist will inflect to `"Zahnarzt"` for a male doctor, `"Zahnärztin"` for a female doctor.
 - `photo` an photo photo url of the doctor profile
-- `rating` the patients's overall rating for this practice. Optional.  
+- `rating` the patients's overall rating for this doctor. Optional.  
 - `rating_count` the number of ratings for this profile. Optional, but always given when `rating` is.  
-- `status`: Status of the practice. Possible values are:  
-  - `"DELETED"` - the practice has been deleted from doxter  
-  - `"LISTED"` - the practice is listed on doxter  
+- `status`: Status of the doctor. Possible values are:  
+  - `"DELETED"` - the doctor has been deleted from doxter  
+  - `"LISTED"` - the doctor is listed on doxter  
 
 ## <a name="doctor-details"></a>Doctor details
 
