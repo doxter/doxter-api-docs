@@ -319,6 +319,38 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
         "2015-11-16T07:00:00.000Z",
         "2015-11-16T07:30:00.000Z"
     ],
+    "reviews": [
+     {
+       "patient_name": "Anna S.",
+       "patient_text": "Kurze Wartezeit, super Beratung, gerne wieder. Danke.",
+       "doctor_text": "",
+       "wait_time": 4,
+       "bedside_manner":5,
+       "recommendation":5,
+       "review_date": "2016-06-15",
+       "status":"LISTED"
+     },
+     {
+       "patient_name": "",
+       "patient_text": "Dr. Mustermann hat leider nicht darauf hingewiesen, dass die Ermittlung des PSA-Wert für Kassenpatienten kostenpflichtig ist. Er hat auch nicht gefragt, ob ich das will.",
+       "doctor_text": "Sehr geehrter Patient: Vielen Dank für Ihre Bewertung. Leider geht aus Ihrer\r\nAussage \"er hat auch nicht gefragt, ob ich das will\" nicht hervor, was konkret\r\nSie damit meinen. Meinten Sie damit die Blutentnahme allgemein, so hätten Sie gegenüber der Schwester äußern können, dass Sie dies nicht möchten. Meinten Sie damit, dass Sie die PSA-Wert-Bestimmung nicht wollten, hätten Sie ebenfalls diesen Wunsch gegenüber der Schwester äußern können.",
+       "wait_time": 3,
+       "bedside_manner":1,
+       "recommendation":1,
+       "review_date": "2016-06-05",
+       "status":"LISTED"
+     },
+     {
+       "patient_name": "",
+       "patient_text": "Von Kompetenz und Freundlichkeit fehlt jede Spur.",
+       "doctor_text": "",
+       "wait_time": 1,
+       "bedside_manner":1,
+       "recommendation":1,
+       "review_date": "2016-05-30",
+       "status":"DELETED"
+     }
+    ],
     "url": "https://www.doxter.de/doctors/4dc96eb2dc6e9a0af3000045",
     "status": "LISTED"
 }
