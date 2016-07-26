@@ -301,6 +301,7 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
 ```JSON
 {
     "id": "4dc96eb2dc6e9a0af3000045",
+    "url": "https://www.doxter.de/doctors/4dc96eb2dc6e9a0af3000045",
     "gender": "Herr",
     "title": "Dr. ",
     "first_name": "Dietrich",
@@ -351,7 +352,37 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
        "status":"DELETED"
      }
     ],
-    "url": "https://www.doxter.de/doctors/4dc96eb2dc6e9a0af3000045",
+    
     "status": "LISTED"
 }
 ```
+
+## Results
+
+Each result within the results array may contain the following fields:  
+
+- `id` - contains a unique stable identifier denoting this profile
+- `url` contains the URL of the official doxter page for this doctor
+- `gender` can be either: `"Herr"` or `"Frau"`  
+- `title` contains the academic title like `"Dr."` or `"Prof. Dr."`  
+- `first_name` is the first name of the person  
+- `last_name` is the last name of the person  
+- `job_titles[]` contains an array of practice type or gender inflected specialties. For example: dentist will inflect to `"Zahnarzt"` for a male doctor, `"Zahnärztin"` for a female doctor.
+- `photo` an photo photo url of the doctor profile
+- `rating` the patients's overall rating for this doctor. Optional.  
+- `rating_count` the number of ratings for this profile. Optional, but always given when `rating` is.  
+- `available_times` 
+- `reviews[]`
+    - `patient_name` name of the patient, is blank for anonym review
+    - `patient_text` Optional
+    - `doctor_text` Optional
+    - `wait_time` patients rating for waiting time (1..5, 5 is best)
+    - `bedside_manner` patients rating for bedside manner (1..5, 5 is best)
+    - `recommendation` would the patient recomment the doctor (1..5, 5 is best)
+    - `review_date` review creating date
+    - `status` Status of the review. Possible values are:
+        - `"DELETED"` - the review has been deleted from doxter
+        - `"LISTED"` - the review is listed on doxter  
+- `status`: Status of the doctor. Possible values are:  
+  - `"DELETED"` - the doctor has been deleted from doxter  
+  - `"LISTED"` - the doctor is listed on doxter  
