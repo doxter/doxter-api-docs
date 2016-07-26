@@ -286,7 +286,7 @@ Each result within the results array may contain the following fields:
 
 ## <a name="doctor-details"></a>Doctor details
 
-This service returns detailed information about a doctor. A request is an HTTP URL of the following form:  
+This service returns detailed information about a doctor. A request is an HTTP URL in the following form:  
 
 ```
 GET https://practices.doxterapis.com/v1/doctors/{id}
@@ -300,12 +300,12 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
 
 ```JSON
 {
-    "id": "4dc96eb2dc6e9a0af3000045",
-    "url": "https://www.doxter.de/doctors/4dc96eb2dc6e9a0af3000045",
+    "id": "5328651a5bd932eae600000d",
+    "url": "https://www.doxter.de/doctors/5328651a5bd932eae600000d",
     "gender": "Herr",
-    "title": "Dr. ",
-    "first_name": "Dietrich",
-    "last_name": "Gericke",
+    "title": "Dr. med.",
+    "first_name": "Jens",
+    "last_name": "Mustermann",
     "job_titles": [
         "Zahnarzt"
     ],
@@ -313,7 +313,7 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
         "Master of Science Endodontie",
         "Wurzelkanalbehandlung unter dem Dentalmikroskop"
     ],
-    "photo": "https://doxter-de.s3.amazonaws.com/assets/images/doctors/4dc96eb2dc6e9a0af3000045.jpeg",
+    "photo": "https://doxter-de.s3.amazonaws.com/assets/images/doctors/5328651a5bd932eae600000d.png",
     "rating": 4.6,
     "rating_count": 9,
     "available_times": [
@@ -368,18 +368,18 @@ Each result within the results array may contain the following fields:
 - `first_name` is the first name of the person  
 - `last_name` is the last name of the person  
 - `job_titles[]` contains an array of practice type or gender inflected specialties. For example: dentist will inflect to `"Zahnarzt"` for a male doctor, `"Zahnärztin"` for a female doctor.
-- `photo` an photo photo url of the doctor profile
-- `rating` the patients's overall rating for this doctor. Optional.  
+- `photo` an url of the doctor profile picture
+- `rating` the patient's overall rating for this doctor. Optional.  
 - `rating_count` the number of ratings for this profile. Optional, but always given when `rating` is.  
-- `available_times` 
+- `available_times[]` An array of times in ISO8601 format with available times of this doctor. Optional.  
 - `reviews[]`
-    - `patient_name` name of the patient, is blank for anonym review
+    - `patient_name` name of the patient, is blank for anonymous review
     - `patient_text` Optional
     - `doctor_text` Optional
-    - `wait_time` patients rating for waiting time (1..5, 5 is best)
-    - `bedside_manner` patients rating for bedside manner (1..5, 5 is best)
+    - `wait_time` patient's rating for waiting time (1..5, 5 is best)
+    - `bedside_manner` patient's rating for bedside manner (1..5, 5 is best)
     - `recommendation` would the patient recomment the doctor (1..5, 5 is best)
-    - `review_date` review creating date
+    - `review_date` review creation date
     - `status` Status of the review. Possible values are:
         - `"DELETED"` - the review has been deleted from doxter
         - `"LISTED"` - the review is listed on doxter  
