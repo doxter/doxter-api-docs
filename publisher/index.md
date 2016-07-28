@@ -352,7 +352,6 @@ GET https://practices.doxterapis.com/v1/doctors/{id}
        "status":"DELETED"
      }
     ],
-    
     "status": "LISTED"
 }
 ```
@@ -373,9 +372,9 @@ Each result within the results array may contain the following fields:
 - `rating_count` the number of ratings for this profile. Optional, but always given when `rating` is.  
 - `available_times[]` An array of times in ISO8601 format with available times of this doctor. Optional.  
 - `reviews[]`
-    - `patient_name` name of the patient, is blank for anonymous review
-    - `patient_text` Optional
-    - `doctor_text` Optional
+    - `patient_name` name of the patient, missing for anonymous review. Optional.
+    - `patient_text` Optional.
+    - `doctor_text` Optional.
     - `wait_time` patient's rating for waiting time (1..5, 5 is best)
     - `bedside_manner` patient's rating for bedside manner (1..5, 5 is best)
     - `recommendation` would the patient recomment the doctor (1..5, 5 is best)
