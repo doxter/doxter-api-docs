@@ -168,8 +168,8 @@ Fields in the reponse:
 - **calendar_id**: calendar id,  
 - **hide_booked_times**: if set to ‘true’, will still show the timeslots after being booked  
 - **every_n_weeks**: timeblock will only recur every n weeks; default is 1  
-- **margin_to_first_timeslots**: in seconds, defines the leadtime to the first timeslot from now  
-- **range_limit_for_timeslots**: in seconds, defines the value until a booking can be made from now in the future  
+- **margin__to__first__timeslots**: in seconds, defines the leadtime to the first timeslot from now  
+- **range__limit__for__timeslots**: in seconds, defines the value until a booking can be made from now in the future  
 - **status**: INACTIVE | ACTIVE | DELETED  
 
 ```JSON
