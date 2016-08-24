@@ -166,10 +166,10 @@ Fields in the reponse:
 - **valid_until**: Date to which the timeblock is valid  
 - **updated_at**: Date on which the timeblock was last updated  
 - **calendar_id**: calendar id,  
-- **hide_booked_times**: if set to ‘true’, will still show the timeslots after being booked  
-- **every_n_weeks**: timeblock will only recur every n weeks; default is 1  
-- **margin__to__first__timeslots**: in seconds, defines the leadtime to the first timeslot from now  
-- **range__limit__for__timeslots**: in seconds, defines the value until a booking can be made from now in the future  
+- **hide\_booked\_times**: if set to ‘true’, will still show the timeslots after being booked  
+- **every\_n\_weeks**: timeblock will only recur every n weeks; default is 1  
+- **margin\_to\_first\_timeslots**: in seconds, defines the leadtime to the first timeslot from now  
+- **range\_limit\_for\_timeslots**: in seconds, defines the value until a booking can be made from now in the future  
 - **status**: INACTIVE | ACTIVE | DELETED  
 
 ```JSON
