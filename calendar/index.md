@@ -26,11 +26,11 @@ layout: default
 
 ## <a name="01"></a>Introduction
 
-Welcome to the doxter API specification for synchronisation. With the doxter API you can access your calendars, get updates of new bookings, reschedule bookings and block available times.  
+Welcome to the Doctena API specification for synchronisation. With the Doctena API you can access your calendars, get updates of new bookings, reschedule bookings and block available times.  
 
 ### Authentication
 
-HTTP Basic authentication. Username and password come from a valid login on doxter. One account can have many logins. One login can also be connected to many accounts. Passwords can be reset on the **login page**.  
+HTTP Basic authentication. Username and password come from a valid login on Doctena. One account can have many logins. One login can also be connected to many accounts. Passwords can be reset on the **login page**.  
 
 API Base URL: https://www.doxter.de/api/v2/ (still on doxter.de for backwards compatibilty with existing implementations)
 
