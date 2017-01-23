@@ -4,7 +4,8 @@ layout: default
 
 # Calendar API
 
-## Doxter Synchronisation API v2.1
+## Doctena Synchronisation API v2.1
+(formerly known as Doxter Synchronisation API)
 
 #### [Introduction](#01)
 #### [Calendars](#02)
@@ -31,7 +32,7 @@ Welcome to the doxter API specification for synchronisation. With the doxter API
 
 HTTP Basic authentication. Username and password come from a valid login on doxter. One account can have many logins. One login can also be connected to many accounts. Passwords can be reset on the **login page**.  
 
-API Base URL: https://www.doxter.de/api/v2/  
+API Base URL: https://www.doxter.de/api/v2/ (still on doxter.de for backwards compatibilty with existing implementations)
 
 ### Fields and Parameters
 
