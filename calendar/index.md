@@ -32,7 +32,7 @@ Welcome to the Doctena API specification for synchronisation. With the Doctena A
 
 HTTP Basic authentication. Username and password come from a valid login on Doctena. One account can have many logins. One login can also be connected to many accounts. Passwords can be reset on the **login page**.  
 
-API Base URL: https://www.doxter.de/api/v2/ (still on doxter.de for backwards compatibilty with existing implementations)
+API Base URL: https://www.doxter.de/api/v2/ (still on doxter.de for backward compatibilty with existing implementations)
 
 ### Fields and Parameters
 
