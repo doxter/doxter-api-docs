@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# The doxter Practices API for publishers
+# The doxter Practices API for publishers (shut down 14.05.2020)
 
 The doxter Practice API is a service that returns information about doctor practices using HTTP requests. The service is accessed as an HTTP request and returns JSON only. The Pratice API uses a doxter ID to uniquely identify each entity (practice or doctor). The following api requests are available:
 
